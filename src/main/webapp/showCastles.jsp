@@ -4,12 +4,12 @@
 <html>
 <body>
       
-     <c:forEach var="castleId" begin="1" end="${castleData.allCastles.size()}">
-        <p>castleName: ${castleData.allCastles.get(castleId-1).castleName}</p>
-        <p>built: ${castleData.allCastles.get(castleId-1).built}</p>
-        <p>visitTime: ${castleData.allCastles.get(castleId-1).visitTime}</p>
-        <p>condition: ${castleData.allCastles.get(castleId-1).condition}</p>
-        <p>material: ${castleData.allCastles.get(castleId-1).material}</p>
+     <c:forEach items="${castleData.allCastles}" var="castle">
+        <p>castleName: ${castle.castleName}</p>
+        <p>built: ${castle.built}</p>
+        <p>visitTime: ${castle.visitTime}</p>
+        <p>condition: ${castle.condition}</p>
+        <p>material: ${castle.material}</p>
    </c:forEach>
    
    <a href="index.jsp">Add New Castle</a>

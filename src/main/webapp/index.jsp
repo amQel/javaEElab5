@@ -5,13 +5,23 @@
 <html>
 <head>
     <title>Message board</title>
+<script src="/webjars/jquery/3.2.1/jquery.min.js">
+$(document).ready(function () {
+	  //your code here
+	
+$('#castleadd').submit(function() {
+    $('#castleadd').append("<div>Tworzymy zamki właśnie dla Ciebie!!</div>");
+    return false; 
+});
+});
+</script>
 </head>
 <body>
 <jsp:useBean id="singleCastle" class="zameczki.Castle" scope="session" />
 
     <h2>Add Your castle!</h2>
    
-    <form action="addCastle" method="post">
+    <form action="addCastle" method="post" id="castleadd">
         castleName: <input type="text" name="castleName" value="${singleCastle.castleName}"><br/>
         builtDate: <input type="text" name="built" value="${singleCastle.built}"><br/>
 		castleType:<br> Gothic <input type="radio" name="castleType" value="gothic" <%= (singleCastle.getCastleType().contains("gothic"))?("checked='checked'"):""%>>
