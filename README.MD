@@ -1,3 +1,7 @@
-Ten projekt jest absolutnym wstepem, nie oplaca
-sie go kopiowac
-pozdrawiam :)
+USAGE :
+
+git clone
+cd javaEElab5
+asadmin start-domain
+mvn package
+asadmin deploy target/zameczkowo-1.0-SNAPSHOT.war
