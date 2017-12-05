@@ -1,3 +1,5 @@
+
+
 <%@page import="zameczki.AllCastlesData"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -5,16 +7,8 @@
 <html>
 <head>
     <title>Message board</title>
-<script src="/webjars/jquery/3.2.1/jquery.min.js">
-$(document).ready(function () {
-	  //your code here
-	
-$('#castleadd').submit(function() {
-    $('#castleadd').append("<div>Tworzymy zamki właśnie dla Ciebie!!</div>");
-    return false; 
-});
-});
-</script>
+	<script src="resource/js/jquery-3.2.1.min.js"></script>
+	<script src="resource/js/simpleJS.js"></script>
 </head>
 <body>
 <jsp:useBean id="singleCastle" class="zameczki.Castle" scope="session" />
@@ -41,6 +35,7 @@ $('#castleadd').submit(function() {
 		
         <input type="submit" value="Add">
     </form>
+    <div class="warning"></div>
     <a href="clear.jsp">Clear Castles Data</a>
     <a href="showCastles.jsp">Show All Castles</a>
 </body>
